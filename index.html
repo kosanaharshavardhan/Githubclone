@@ -7,56 +7,68 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-left">
-      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="logo">
-      <input type="text" placeholder="Search GitHub..." />
+  <!-- Theme Toggle -->
+  <div class="color-toggle">
+    <button id="theme-toggle">🌙</button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-left">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="logo" alt="GitHub Logo" />
+        <input type="text" class="search-box" placeholder="Search or jump to..." />
+        <nav class="main-nav">
+          <a href="#">Pull requests</a>
+          <a href="#">Issues</a>
+          <a href="#">Codespaces</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Explore</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <img src="https://avatars.githubusercontent.com/u/1?v=4" class="avatar" alt="User Avatar" />
+      </div>
     </div>
-    <nav>
-      <a href="#">Pull requests</a>
-      <a href="#">Issues</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Explore</a>
-    </nav>
   </header>
 
-  <main>
-    <aside>
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Sidebar -->
+    <aside class="sidebar">
       <div class="profile-card">
-        <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Pic" class="avatar">
+        <img src="https://avatars.githubusercontent.com/u/1?v=4" class="avatar-large" alt="Octocat Avatar" />
         <h2>octocat</h2>
-        <p>The official GitHub mascot</p>
-        <button>Follow</button>
+        <p>Monalisa Octocat</p>
+        <button class="follow-btn">Follow</button>
       </div>
     </aside>
 
+    <!-- Tabbed Content Area -->
     <section class="content">
       <div class="tabs">
-        <button class="tab active" data-tab="repos">Repositories</button>
+        <button class="tab active" data-tab="repo">Repositories</button>
         <button class="tab" data-tab="projects">Projects</button>
-        <button class="tab" data-tab="packages">Packages</button>
+        <button class="tab" data-tab="stars">Stars</button>
       </div>
 
-      <div class="tab-content" id="repos">
-        <h3>Repositories</h3>
-        <ul>
-          <li><strong>Hello-World</strong> - My first repo!</li>
-          <li><strong>git-consortium</strong> - Git Collaboration guide</li>
-        </ul>
+      <div id="repo" class="tab-content active">
+        <div class="repo-item">Hello-World</div>
+        <div class="repo-item">Spoon-Knife</div>
+        <div class="repo-item">octocat.github.io</div>
       </div>
 
-      <div class="tab-content hidden" id="projects">
-        <h3>Projects</h3>
-        <p>No projects available.</p>
+      <div id="projects" class="tab-content">
+        <p>No projects yet</p>
       </div>
 
-      <div class="tab-content hidden" id="packages">
-        <h3>Packages</h3>
-        <p>No packages published.</p>
+      <div id="stars" class="tab-content">
+        <p>No starred repositories</p>
       </div>
     </section>
   </main>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
